@@ -21,6 +21,11 @@ if ('Notification' in window) {
 <button type="button" id="subscribe">Следить за изменениями</button>
 <script>
     Init();
+    const broadcast = new BroadcastChannel('channel-123');
+    broadcast.addEventListener('message', (event) => {
+        console.log(event)
+    });
+});
 </script>
 </body>
 
