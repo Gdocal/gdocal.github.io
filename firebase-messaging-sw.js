@@ -11,6 +11,21 @@ firebase.initializeApp({
   measurementId: "G-0WSN29YLRH"
 });
 
+function notifyCallback(title, opt) {
+        console.log("title", title);
+    }
+
+    const handler = {
+        construct(target, args) {
+            notifyCallback(...args);
+            return new target(...args);
+        }
+    };
+
+const ProxifiedNotification = new Proxy(Notification, handler);
+
+self.Notification = ProxifiedNotification;
+
 const messaging = firebase.messaging();
 const broadcast = new BroadcastChannel('channel-123');
 messaging.setBackgroundMessageHandler((payload)=>{broadcast.postMessage(payload)})
