@@ -12,3 +12,4 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
+messaging.setBackgroundMessageHandler((payload)=>{console.log("background",payload)})
