@@ -1,6 +1,14 @@
 // firebase_subscribe.js
 firebase.initializeApp({
-    messagingSenderId: '532209433002'
+ 
+  apiKey: "AIzaSyAYmw2WFzZRmiDWoglR-yohkDu873mDOXc",
+  authDomain: "test-notitication.firebaseapp.com",
+  projectId: "test-notitication",
+  storageBucket: "test-notitication.appspot.com",
+  messagingSenderId: "532209433002",
+  appId: "1:532209433002:web:f1d1f7678d26954b4313d3",
+  measurementId: "G-0WSN29YLRH"
+
 });
 
 // браузер поддерживает уведомления
