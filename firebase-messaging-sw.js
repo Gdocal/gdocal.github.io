@@ -14,4 +14,4 @@ firebase.initializeApp({
 const messaging = firebase.messaging();
 const broadcast = new BroadcastChannel('channel-123');
 messaging.setBackgroundMessageHandler((payload)=>{broadcast.postMessage(payload)})
-messaging.onMessage((payload)=>{broadcast.postMessage(payload)})
+//messaging.onMessage((payload)=>{broadcast.postMessage(payload)})
